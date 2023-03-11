@@ -1,0 +1,40 @@
+.welcome-container {
+    background-image: url("../images/arkaplan.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 70%;
+    width: 100%;
+}
+
+.welcome-filter {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-content-container {
+    align-items: flex-start;
+    flex-direction: column;
+    position: absolute;
+    display: flex;
+    bottom: 10%;
+    width: 40%;
+    left: 40px;
+    gap: 20px;
+}
+
+.welcome-content-container span:nth-child(1) {
+    font-family: inter-regular;
+    font-size: 26px;
+    color: white;
+}
+
+.welcome-content-container span:nth-child(2) {
+    font-family: inter-light;
+    margin-bottom: 4px;
+    line-height: 22px;
+    font-size: 16px;
+    color: white;
+}
