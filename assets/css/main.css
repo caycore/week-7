@@ -1,0 +1,103 @@
+@font-face {
+    font-family: inter-regular;
+    src: url("../fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+    font-family: inter-light;
+    src: url("../fonts/Inter-Light.ttf");
+}
+
+@font-face {
+    font-family: inter-semibold;
+    src: url("../fonts/Inter-SemiBold.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    background-color: #e3e3e3;
+    font-family: inter-regular;
+    height: 100%;
+    width: 100%;
+}
+
+.header-table {
+    display: table;
+    width: 100%;
+}
+
+.header-table-cell {
+    background-color: white;
+    display: table-cell;
+    padding: 10px;
+    width: 100%;
+}
+
+.header-container {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    width: 100%;
+}
+
+.header-content-container {
+    flex-direction: row;
+    align-items: center;
+    user-select: none;
+    display: flex;
+    gap: 10px;
+}
+
+.click-event:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.click-event:active {
+    transform: translateY(2px);
+    transition: transform 0.1s;
+}
+
+.header-logo {
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+}
+
+.header-content {
+    flex-direction: column;
+    display: flex;
+    gap: 4px;
+}
+
+.header-content span:nth-child(1) {
+    font-family: inter-semibold;
+    color: #FF001F;
+    font-size: 22px;
+}
+
+.header-content span:nth-child(2) {
+    font-family: inter-regular;
+    color: #2E2E2E;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: #232323;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #FF001F;
+}
+
+.nav-container {
+    display: flex;
+    gap: 10px;
+}
