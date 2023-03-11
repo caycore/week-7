@@ -52,3 +52,23 @@
     display: flex;
     gap: 10px;
 }
+
+.broadcast-indicator {
+    background-color: transparent;
+    border: 2px solid white;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    height: 25px;
+    width: 25px;
+}
+
+.broadcast-indicator span {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    height: 10px;
+    width: 10px;
+}
