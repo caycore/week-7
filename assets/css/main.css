@@ -25,15 +25,10 @@ html, body {
     width: 100%;
 }
 
-.header-table {
-    display: table;
-    width: 100%;
-}
-
-.header-table-cell {
+.header {
     background-color: white;
-    display: table-cell;
     padding: 10px;
+    box-sizing: border-box;
     width: 100%;
 }
 
