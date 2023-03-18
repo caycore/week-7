@@ -99,6 +99,10 @@ button:active {
     user-select: none;
 }
 
+button.fill-container {
+    width: 100%;
+}
+
 button.filled {
     background-color: #FF001F;
     color: white;
@@ -153,6 +157,109 @@ a:hover {
 .nav-container {
     display: flex;
     gap: 10px;
+}
+
+.section-title {
+    font-family: inter-bold;
+    margin-bottom: 40px;
+    color: #212121;
+    font-size: 34px;
+}
+
+.section-container {
+    justify-content: center;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    display: flex;
+    padding: 40px;
+    height: 75%;
+    width: 100%;
+}
+
+.section-content-container {
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    max-width: 90%;
+    display: flex;
+    gap: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    .section-container {
+        height: "auto"
+    }
+
+    .section-content-container {
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+.text-input-container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.text-input-container label {
+    font-family: inter-semibold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.text-input-container input {
+    font-family: inter-regular;
+    border: 2px solid white;
+    font-size: 18px;
+    border-radius: 10px;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.text-input-container input:focus {
+    border: 2px solid #FF001F;
+    outline: none;
+}
+
+.multi-text-input-container {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.multi-text-input-container label {
+    font-family: inter-semibold;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+}
+
+.multi-text-input-container textarea {
+    font-family: inter-regular;
+    border: 2px solid white;
+    border-radius: 10px;
+    min-height: 150px;
+    resize: vertical;
+    font-size: 18px;
+    outline: none;
+    padding: 20px;
+    width: 100%;
+}
+
+.multi-text-input-container textarea:focus {
+    border: 2px solid #FF001F;
+    outline: none;
 }
 
 .footer-container {

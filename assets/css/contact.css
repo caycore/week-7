@@ -1,0 +1,31 @@
+.contact-section-image {
+    border-radius: 30px;
+    width: 40%;
+}
+
+.section-container {
+    min-height: 100% !important;
+    height: auto !important;
+}
+
+.section-content-container {
+    align-items: flex-start !important;
+}
+
+.contact-section-content-container {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.contact-form-send {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .contact-section-image {
+        width: 100%;
+    }
+}
