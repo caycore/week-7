@@ -370,11 +370,25 @@ a:hover {
     flex-direction: row;
     align-items: center;
     padding: 20px 30px;
+    position: relative;
     user-select: none;
     display: flex;
     width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .footer-logo {
+    animation: nibgatLogo 1s infinite linear;
     height: 50px;
+}
+
+@keyframes nibgatLogo {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(-360deg);
+    }
 }

@@ -3,6 +3,9 @@ activeMenuItem.style.color = "#FF001F";
 const activeMobileMenuItem = document.getElementById(`m-${window.location.pathname.replace("/", "").split(".")[0]}`);
 activeMobileMenuItem.style.color = "#FF001F";
 
+const foonterContainer = document.getElementById("footer-container");
+foonterContainer.style.position = "fixed";
+
 const sideMenu = document.getElementById("side-menu");
 
 var menuState = false;
@@ -25,3 +28,11 @@ function goTo(path) {
         window.location.href = path;
     }
 }
+
+window.addEventListener("scroll", () => {
+    if(window.scrollY > 0) {
+        foonterContainer.style.position = "relative";
+    } else {
+        foonterContainer.style.position = "fixed";
+    }
+});
