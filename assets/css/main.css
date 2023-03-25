@@ -144,6 +144,107 @@ button.ghost {
     font-size: 18px;
 }
 
+.mobile-menu-button {
+    display: none;
+    padding: 10px;
+}
+
+.mobile-menu-button:hover {
+    color: #FF001F;
+    cursor: pointer;
+}
+
+.side-menu-container {
+    transform: translateX(-101%);
+    transition: transform 1s;
+    user-select: none;
+    position: fixed;
+    z-index: 9999;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+.side-menu-filter {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    z-index: 99991;
+    height: 100%;
+    width: 100%;
+}
+
+.side-menu-filter:hover {
+    cursor: pointer;
+}
+
+.side-menu-container.isActive {
+    transform: translateX(0%);
+    transition: transform 1s;
+}
+
+.side-menu-container .side-menu-content-container {
+    backdrop-filter: blur(10px);
+    background-color: rgba(250, 250, 250, 0.85);
+    flex-direction: column;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 99992;
+    display: flex;
+    padding: 20px;
+    height: 100%;
+    width: 25em;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+.side-menu-container a {
+    padding: 20px;
+}
+
+.side-menu-header-container {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0px 20px;
+    display: flex;
+}
+
+.side-menu-header-container > span {
+    font-family:  inter-semibold;
+    font-size: 24px;
+}
+
+.side-menu-header-container > i {
+    padding: 10px;
+}
+
+.side-menu-header-container > i:hover {
+    color: #FF001F;
+    cursor: pointer;
+}
+
+.seperator {
+    background-color: rgba(0, 0, 0, 0.25);
+    width: 100%;
+    height: 1px;
+}
+
+.side-menu-seperator {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 950px) {
+    .mobile-menu-button {
+        display: block;
+    }
+    .nav-container {
+        display: none !important;
+    }
+}
+
 a {
     text-decoration: none;
     color: #232323;
