@@ -126,27 +126,7 @@
         </div>
         <div class="section-container">
             <span class="section-title">Yayın Ekibi</span>
-            <div class="section-content-container">
-                <div class="broadcaster-component-container">
-                    <img
-                        src="assets/images/broadcasters/fab.png"
-                        class="broadcaster-component-profile-photo"
-                    />
-                    <div class="broadcaster-component-content-container">
-                        <span>Furkan Atakan BOZKURT</span>
-                        <span>Eğitim & Oyun</span>
-                    </div>
-                </div>
-                <div class="broadcaster-component-container">
-                    <img
-                        src="assets/images/broadcasters/osman.jpg"
-                        class="broadcaster-component-profile-photo"
-                    />
-                    <div class="broadcaster-component-content-container">
-                        <span>Osman Can CEYLAN</span>
-                        <span>Podcast & Sohbet</span>
-                    </div>
-                </div>
+            <div id="team" class="section-content-container">
             </div>
         </div>
         <div
@@ -211,6 +191,35 @@
         <script
             src="./assets/js/menu.js"
         ></script>
+        <script>
+            fetch("https://caycore.nibgat.space/getTeam", {
+                "Access-Control-Allow-Origin": "*"
+            })
+                .then((res) => {
+                    return res.json();
+                })
+                .then((res) => {
+                    const teamElement = document.getElementById("team");
+                    res.payload.forEach((item) => {
+                        teamElement.innerHTML += `
+                            <div class="broadcaster-component-container">
+                                <img
+                                    src="${item.profilePhotoURL}"
+                                    class="broadcaster-component-profile-photo"
+                                />
+                                <div class="broadcaster-component-content-container">
+                                    <span>${item.fullName}</span>
+                                    <span>${item.job}</span>
+                                </div>
+                            </div>
+                        `;
+                    });
+                })
+                .catch((err) => {
+                    alert(err.message);
+                    console.error(err);
+                });
+        </script>
         <script src="https://kit.fontawesome.com/6633b60749.js" crossorigin="anonymous"></script>
     </body>
 </html>
